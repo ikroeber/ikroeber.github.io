@@ -1,27 +1,44 @@
 <template>
   <div id="app">
-    <Navbar />
+    <Header />
+    <Content />
+    <Footer />
   </div>
 </template>
 
 <script>
-import Navbar from './components/navigation/Navbar.vue';
+import Content from "./components/Content.vue";
+import Footer from "./components/Footer.vue";
+import Header from "./components/Header.vue";
 
 export default {
-  name: 'app',
+  name: "App",
   components: {
-    Navbar,
-  }
-}
+    Header,
+    Footer,
+    Content,
+  },
+};
 </script>
 
+<style src="./sanitize.css">
+</style>
+
 <style>
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
 }
 </style>
