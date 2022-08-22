@@ -4,9 +4,9 @@ on:
     branches:
       - "main"
 jobs:
-  build_deploy:
+  build:
     runs-on: ubuntu-latest
-    name: Build and Deploy
+    name: Build Vue Application
     steps:
       - uses: actions/checkout@v2
       - uses: thefrustrateddev/vue-deploy-github-pages@v1.0.0
@@ -21,3 +21,17 @@ jobs:
       - uses: actions/upload-pages-artifact@v1.0.3
         with:
           path: "./"
+
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    name: Deploy to Github Pages
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    steps:
+      - uses: actions/deploy-pages@v1.0.9
