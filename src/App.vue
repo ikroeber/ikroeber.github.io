@@ -21,7 +21,7 @@ export default {
 };
 </script>
 
-<style src="./sanitize.css">
+<style src="./vendor/sanitize.css">
 </style>
 
 <style>
