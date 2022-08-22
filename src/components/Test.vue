@@ -1,12 +1,14 @@
 <template>
-  <p>{{ msg }}</p>
+  <p>{{ this.msg }}</p>
 </template>
 
 <script>
 export default {
   name: 'Test',
-  props: {
-    msg: String
+  data() {
+    return {
+      msg: 'Bem-vindo!'
+    }
   }
 }
 </script>

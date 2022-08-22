@@ -1,17 +1,16 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <Test msg="Welcome to Your Vue.js App" />
+    <Navbar />
   </div>
 </template>
 
 <script>
-import Test from './components/Test.vue'
+import Navbar from './components/navigation/Navbar.vue';
 
 export default {
   name: 'app',
   components: {
-    Test
+    Navbar,
   }
 }
 </script>
