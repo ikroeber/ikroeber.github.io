@@ -1,18 +1,21 @@
-name: Build and Deploy Vue Application to Github Pages
+name: Build and Deploy Vue Application
 on:
   push:
     branches:
       - "main"
 jobs:
-  build_deploy_vue:
+  build_deploy:
     runs-on: ubuntu-latest
-    name: Build and Deploy Vue
+    name: Build and Deploy
     steps:
       - uses: actions/checkout@v2
-      - id: Build-Deploy-Vue
-        uses: thefrustrateddev/vue-deploy-github-pages@v1.0.0
+      - uses: thefrustrateddev/vue-deploy-github-pages@v1.0.0
         with:
           username: "ikroeber"
           reponame: "ikroeber.github.io"
+          email: "igor.kroeber@protonmail.com"
           token: ${{ secrets.GITHUB_TOKEN }}
-          basebranchname: "main"
+      - uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+      - uses: actions/upload-pages-artifact
