@@ -15,4 +15,4 @@ jobs:
           username: "ikroeber"
           reponame: "ikroeber.github.io"
           token: ${{ secrets.GITHUB_TOKEN }}
-          basebranchname: main
+          basebranchname: "main"
