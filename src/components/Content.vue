@@ -1,10 +1,12 @@
 <template>
   <div id="contentWrapper">
+    <LandingPage />
   </div>
 </template>
 
 <script>
-export default {};
+import LandingPage from './LandingPage.vue';
+export default { components: { LandingPage } };
 </script>
 
 <style>

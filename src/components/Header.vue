@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import pages from '../constants/pages';
+import { pages } from '../constants/pages';
 import LinkList from './shared/LinkList.vue';
 
 export default {
@@ -37,7 +37,7 @@ header,
 
 header {
   padding: 0.5em;
-  background-color: #555;
+  background-color: #333;
 }
 
 #headerLogo {
