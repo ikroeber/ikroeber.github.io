@@ -35,8 +35,8 @@ header,
 }
 
 header {
-  padding-left: .5em;
-  padding-right: .5em;
+  padding-left: 1em;
+  padding-right: 1em;
   background-color: #0008;
   height: 5em;
   width: 100%;
@@ -58,8 +58,8 @@ header {
 header a {
   color: #ffc08c;
   text-decoration: none;
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: .5em;
+  padding-right: .5em;
   transition: color .15s linear;
 }
 
