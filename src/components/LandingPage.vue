@@ -1,5 +1,5 @@
 <template>
-  <article id="personal-info">
+  <article>
     <section id="about-me">
       <h1>Hi, I am Igor Kroeber!</h1>
       <h2>I'm a Software Engineer from Brazil</h2>

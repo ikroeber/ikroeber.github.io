@@ -27,7 +27,7 @@ export default {
 </style>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 
 html,
 body {
@@ -36,28 +36,24 @@ body {
   height: 100%;
 }
 
+h1,
+h2 {
+  font-weight: 400;
+}
+
 #backgroundWrapper {
   z-index: -1;
   position: absolute;
-  top: 0;
-  bottom: 0;
+  height: 100%;
   width: 100%;
+  background-size: cover;
   background-image: url('./assets/background.svg');
-}
-
-div,
-article,
-section,
-span,
-h1,
-h2 {
-  background-color: transparent;
 }
 
 #app {
   z-index: 1;
   background-color: transparent;
-  font-family: 'Koulen';
+  font-family: 'Staatliches';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #fafafa;
@@ -65,5 +61,27 @@ h2 {
   flex-direction: column;
   width: 100%;
   height: 100%;
+}
+
+@keyframes linkHover {
+  0% {
+    color: #ffc08c;
+    bottom: .0em;
+  }
+
+  100% {
+    color: #33ffb8;
+    bottom: .25em;
+  }
+}
+
+nav a {
+  color: #ffc08c;
+  text-decoration: none;
+  position: relative;
+}
+
+nav a:hover {
+  animation: linkHover .25s both;
 }
 </style>
