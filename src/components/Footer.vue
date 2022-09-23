@@ -41,9 +41,6 @@ footer {
   display: flex;
   flex-direction: column;
   background-color: #0008;
-  position: absolute;
-  width: 100%;
-  bottom: 0px;
 }
 
 footer a {
@@ -64,7 +61,7 @@ footer span {
 
 @media screen and (max-width: 800px) {
   footer {
-    font-size: 12px;
+    font-size: 14px;
   }
 }
 </style>

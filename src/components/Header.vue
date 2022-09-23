@@ -35,9 +35,10 @@ header,
 }
 
 header {
-  padding: 0.5em;
+  padding-left: .5em;
+  padding-right: .5em;
   background-color: #0008;
-  height: 4em;
+  height: 5em;
   width: 100%;
   position: absolute;
 }
@@ -50,7 +51,7 @@ header {
 
 #headerText {
   color: #fafafa;
-  font-size: 22px;
+  font-size: 32px;
   cursor: text;
 }
 

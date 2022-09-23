@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <div id="backgroundWrapper"></div>
     <Header />
     <Content />
     <Footer />
@@ -35,7 +36,27 @@ body {
   height: 100%;
 }
 
+#backgroundWrapper {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-image: url('./assets/background.svg');
+}
+
+div,
+article,
+section,
+span,
+h1,
+h2 {
+  background-color: transparent;
+}
+
 #app {
+  z-index: 1;
+  background-color: transparent;
   font-family: 'Koulen';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

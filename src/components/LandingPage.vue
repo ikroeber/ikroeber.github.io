@@ -4,6 +4,50 @@
       <h1>Hi, I am Igor Kroeber!</h1>
       <h2>I'm a Software Engineer from Brazil</h2>
     </section>
+    <section id="about-me">
+      <h1>Hi, I am Igor Kroeber!</h1>
+      <h2>I'm a Software Engineer from Brazil</h2>
+    </section>
+    <section id="about-me">
+      <h1>Hi, I am Igor Kroeber!</h1>
+      <h2>I'm a Software Engineer from Brazil</h2>
+    </section>
+    <section id="about-me">
+      <h1>Hi, I am Igor Kroeber!</h1>
+      <h2>I'm a Software Engineer from Brazil</h2>
+    </section>
+    <section id="about-me">
+      <h1>Hi, I am Igor Kroeber!</h1>
+      <h2>I'm a Software Engineer from Brazil</h2>
+    </section>
+    <section id="about-me">
+      <h1>Hi, I am Igor Kroeber!</h1>
+      <h2>I'm a Software Engineer from Brazil</h2>
+    </section>
+    <section id="about-me">
+      <h1>Hi, I am Igor Kroeber!</h1>
+      <h2>I'm a Software Engineer from Brazil</h2>
+    </section>
+    <section id="about-me">
+      <h1>Hi, I am Igor Kroeber!</h1>
+      <h2>I'm a Software Engineer from Brazil</h2>
+    </section>
+    <section id="about-me">
+      <h1>Hi, I am Igor Kroeber!</h1>
+      <h2>I'm a Software Engineer from Brazil</h2>
+    </section>
+    <section id="about-me">
+      <h1>Hi, I am Igor Kroeber!</h1>
+      <h2>I'm a Software Engineer from Brazil</h2>
+    </section>
+    <section id="about-me">
+      <h1>Hi, I am Igor Kroeber!</h1>
+      <h2>I'm a Software Engineer from Brazil</h2>
+    </section>
+    <section id="about-me">
+      <h1>Hi, I am Igor Kroeber!</h1>
+      <h2>I'm a Software Engineer from Brazil</h2>
+    </section>
   </article>
 </template>
 
@@ -15,11 +59,7 @@ export default {};
 article {
   padding-left: 1.5em;
   padding-right: 1.5em;
-  background-image: url('../assets/background.svg');
-  background-size: cover;
-  background-attachment: fixed;
-  height: 100%;
-  padding-top: 4em;
+  padding-top: 5em;
 }
 
 h1,
