@@ -1,6 +1,10 @@
 <template>
   <footer>
-    <LinkList :links="links" :style="{ color: colors.warning }" />
+    <nav>
+      <a v-for="link in links" :key="link.name" :href="link.url">
+        {{ link.name }}
+      </a>
+    </nav>
     {{ copyrightNotice }}
   </footer>
 </template>
@@ -29,23 +33,34 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 footer {
+  color: #fafafa;
   padding: 0.5em;
   align-items: center;
   display: flex;
   flex-direction: column;
-  background-color: #333;
-  color: #f4f4f4;
+  background-color: #0008;
+  position: absolute;
+  width: 100%;
+  bottom: 0px;
 }
 
 footer a {
   color: #ffc08c;
   text-decoration: none;
+  padding-left: .5em;
+  padding-right: .5em;
   transition: color .15s linear;
 }
 
 footer a:hover {
   color: #33ffb8;
+}
+
+@media screen and (max-width: 800px) {
+  footer {
+    font-size: 12px;
+  }
 }
 </style>

@@ -1,12 +1,11 @@
 <template>
   <header>
-    <img src="../assets/logo.png" alt="Igor Kroeber" id="headerLogo" />
+    <div id="headerText">Igor Kroeber</div>
     <div>
       <div id="headerRight">
-        <nav>
-          <LinkList :links="links" />
-        </nav>
-        Menu aqui
+        <a v-for="link in links" :key="link.name" :href="link.url">
+          {{ link.name }}
+        </a>
       </div>
     </div>
   </header>
@@ -37,10 +36,32 @@ header,
 
 header {
   padding: 0.5em;
-  background-color: #333;
+  background-color: #0008;
+  height: 4em;
+  width: 100%;
+  position: absolute;
 }
 
-#headerLogo {
-  height: 3em;
+@media screen and (max-width: 800px) {
+  #headerRight {
+    display: none;
+  }
+}
+
+#headerText {
+  color: #fafafa;
+  font-size: 22px;
+}
+
+header a {
+  color: #ffc08c;
+  text-decoration: none;
+  padding-left: .5em;
+  padding-right: .5em;
+  transition: color .15s linear;
+}
+
+header a:hover {
+  color: #33ffb8;
 }
 </style>

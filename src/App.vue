@@ -22,20 +22,24 @@ export default {
 </script>
 
 <style src="./vendor/sanitize.css">
+
 </style>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=Koulen&display=swap');
+
 html,
 body {
+  background-color: #0E2A47;
   width: 100%;
   height: 100%;
 }
 
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Koulen';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  color: #ffc08c;
   display: flex;
   flex-direction: column;
   width: 100%;
