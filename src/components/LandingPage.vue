@@ -13,12 +13,19 @@ export default {};
 
 <style scoped>
 article {
-  padding-left: 1em;
-  padding-right: 1em;
+  padding-left: 1.5em;
+  padding-right: 1.5em;
   background-image: url('../assets/background.svg');
   background-size: cover;
   background-attachment: fixed;
   height: 100%;
   padding-top: 4em;
+}
+
+h1,
+h2,
+p,
+span {
+  cursor: text;
 }
 </style>

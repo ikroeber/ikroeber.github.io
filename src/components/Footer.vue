@@ -5,7 +5,7 @@
         {{ link.name }}
       </a>
     </nav>
-    {{ copyrightNotice }}
+    <span>{{ copyrightNotice }}</span>
   </footer>
 </template>
 
@@ -19,7 +19,7 @@ export default {
     return {
       colors,
       links: pages,
-      copyrightNotice: "Copyright © Igor Kroeber 2022. All rights reserved.",
+      copyrightNotice: "Copyright © Igor Kroeber 2022. Todos os direitos reservados.",
     };
   },
   methods: {
@@ -56,6 +56,10 @@ footer a {
 
 footer a:hover {
   color: #33ffb8;
+}
+
+footer span {
+  cursor: text;
 }
 
 @media screen and (max-width: 800px) {

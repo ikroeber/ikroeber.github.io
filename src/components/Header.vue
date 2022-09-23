@@ -1,6 +1,6 @@
 <template>
   <header>
-    <div id="headerText">Igor Kroeber</div>
+    <span id="headerText">Igor Kroeber</span>
     <div>
       <div id="headerRight">
         <a v-for="link in links" :key="link.name" :href="link.url">
@@ -51,6 +51,7 @@ header {
 #headerText {
   color: #fafafa;
   font-size: 22px;
+  cursor: text;
 }
 
 header a {
