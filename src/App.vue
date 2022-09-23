@@ -60,7 +60,7 @@ h2 {
   font-family: 'Koulen';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #ffc08c;
+  color: #fafafa;
   display: flex;
   flex-direction: column;
   width: 100%;
