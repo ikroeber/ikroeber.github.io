@@ -1,6 +1,6 @@
 <template>
   <header>
-    <span id="headerText">Igor Kroeber</span>
+    <span id="headerText">IK</span>
     <div>
       <div id="headerRight">
         <a v-for="link in links" :key="link.name" :href="link.url">
@@ -58,8 +58,8 @@ header {
 header a {
   color: #ffc08c;
   text-decoration: none;
-  padding-left: .5em;
-  padding-right: .5em;
+  padding-left: 1em;
+  padding-right: 1em;
   transition: color .15s linear;
 }
 
