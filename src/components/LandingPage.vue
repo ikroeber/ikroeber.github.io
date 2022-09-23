@@ -4,50 +4,6 @@
       <h1>Hi, I am Igor Kroeber!</h1>
       <h2>I'm a Software Engineer from Brazil</h2>
     </section>
-    <section id="about-me">
-      <h1>Hi, I am Igor Kroeber!</h1>
-      <h2>I'm a Software Engineer from Brazil</h2>
-    </section>
-    <section id="about-me">
-      <h1>Hi, I am Igor Kroeber!</h1>
-      <h2>I'm a Software Engineer from Brazil</h2>
-    </section>
-    <section id="about-me">
-      <h1>Hi, I am Igor Kroeber!</h1>
-      <h2>I'm a Software Engineer from Brazil</h2>
-    </section>
-    <section id="about-me">
-      <h1>Hi, I am Igor Kroeber!</h1>
-      <h2>I'm a Software Engineer from Brazil</h2>
-    </section>
-    <section id="about-me">
-      <h1>Hi, I am Igor Kroeber!</h1>
-      <h2>I'm a Software Engineer from Brazil</h2>
-    </section>
-    <section id="about-me">
-      <h1>Hi, I am Igor Kroeber!</h1>
-      <h2>I'm a Software Engineer from Brazil</h2>
-    </section>
-    <section id="about-me">
-      <h1>Hi, I am Igor Kroeber!</h1>
-      <h2>I'm a Software Engineer from Brazil</h2>
-    </section>
-    <section id="about-me">
-      <h1>Hi, I am Igor Kroeber!</h1>
-      <h2>I'm a Software Engineer from Brazil</h2>
-    </section>
-    <section id="about-me">
-      <h1>Hi, I am Igor Kroeber!</h1>
-      <h2>I'm a Software Engineer from Brazil</h2>
-    </section>
-    <section id="about-me">
-      <h1>Hi, I am Igor Kroeber!</h1>
-      <h2>I'm a Software Engineer from Brazil</h2>
-    </section>
-    <section id="about-me">
-      <h1>Hi, I am Igor Kroeber!</h1>
-      <h2>I'm a Software Engineer from Brazil</h2>
-    </section>
   </article>
 </template>
 
