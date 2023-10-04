@@ -7,25 +7,25 @@
 </template>
 
 <script>
-export default {
-  props: ['links', 'vertical']
-}
+  export default {
+    props: ['links', 'vertical']
+  }
 </script>
 
 <style scoped>
-.linkList {
-  display: flex;
-}
+  .linkList {
+    display: flex;
+  }
 
-.horizontal {
-  flex-direction: row;
-}
+  .horizontal {
+    flex-direction: row;
+  }
 
-.horizontal>a {
-  margin: 0 .25em 0 .25em;
-}
+  .horizontal > a {
+    margin: 0 0.25em 0 0.25em;
+  }
 
-.vertical {
-  flex-direction: column;
-}
+  .vertical {
+    flex-direction: column;
+  }
 </style>
