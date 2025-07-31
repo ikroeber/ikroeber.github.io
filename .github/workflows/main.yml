@@ -13,7 +13,7 @@ jobs:
         with:
           username: "ikroeber"
           reponame: "ikroeber.github.io"
-          email: "igor.kroeber@protonmail.com"
+          email: "igor.kroeber@gmail.com"
           token: ${{ secrets.GITHUB_TOKEN }}
       - uses: actions/checkout@v2
         with:
