@@ -5,10 +5,9 @@
         {{ link.name }}
       </a>
     </nav>
-    <div>
-      <span>Copyright © Igor Kroeber 2022.</span>
-      <span>Todos os direitos reservados.</span>
-    </div>
+    <p class="copy">
+      Copyright &copy; Igor Kroeber 2025. Todos os direitos reservados.
+    </p>
   </footer>
 </template>
 
@@ -26,31 +25,33 @@
 
 <style scoped>
   footer {
-    color: #fafafa;
-    padding: 1em;
-    align-items: center;
+    padding: 2rem clamp(16px, 6vw, 80px);
     display: flex;
     flex-direction: column;
-    background-color: #0008;
+    align-items: center;
+    gap: 1rem;
+    background: rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 0.25rem;
   }
 
-  footer nav {
-    padding-bottom: 0.5em;
+  nav a {
+    padding: 0.25em 0.6em;
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
   }
 
-  footer a {
-    padding-left: 0.375em;
-    padding-right: 0.375em;
-  }
-
-  footer span {
-    cursor: text;
-  }
-
-  @media screen and (max-width: 800px) {
-    footer span {
-      display: block;
-    }
+  .copy {
+    font-family: 'Inter', sans-serif;
+    font-size: 13px;
+    color: rgba(250, 250, 250, 0.4);
+    margin: 0;
+    text-align: center;
   }
 </style>

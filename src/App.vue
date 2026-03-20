@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <div id="backgroundWrapper"></div>
     <Header />
     <Content />
     <Footer />
@@ -25,61 +24,92 @@
 <style src="./vendor/sanitize.css"></style>
 
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+  :root {
+    --color-bg: #0e2a47;
+    --color-primary: #33ffb8;
+    --color-warning: #ffc08c;
+    --color-text: #fafafa;
+    --color-glass: rgba(255, 255, 255, 0.04);
+    --color-glass-border: rgba(255, 255, 255, 0.08);
+    --section-padding: clamp(64px, 10vw, 120px) clamp(16px, 6vw, 80px);
+    --header-height: 5em;
+  }
 
-  html,
+  html {
+    scroll-behavior: smooth;
+    min-height: 100%;
+  }
+
   body {
-    background-color: #0e2a47;
+    background-color: var(--color-bg);
+    background-image: url('./assets/background.svg');
+    background-size: cover;
+    background-attachment: fixed;
+    min-height: 100%;
     width: 100%;
-    height: 100%;
   }
 
   h1,
-  h2 {
+  h2,
+  h3 {
+    font-family: 'Staatliches', sans-serif;
     font-weight: 400;
   }
 
-  #backgroundWrapper {
-    z-index: -1;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-size: cover;
-    background-image: url('./assets/background.svg');
-  }
-
   #app {
-    z-index: 1;
-    background-color: transparent;
-    font-family: 'Staatliches';
+    font-family: 'Inter', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #fafafa;
+    color: var(--color-text);
     display: flex;
     flex-direction: column;
+    min-height: 100vh;
     width: 100%;
-    height: 100%;
   }
 
   @keyframes linkHover {
     0% {
-      color: #ffc08c;
-      bottom: 0em;
+      color: var(--color-warning);
+      transform: translateY(0)
     }
 
     100% {
-      color: #33ffb8;
-      bottom: 0.25em;
+      color: var(--color-primary);
+      transform: translateY(-0.2em)
     }
   }
 
   nav a {
-    color: #ffc08c;
+    color: var(--color-warning);
     text-decoration: none;
     position: relative;
+    transition: color 0.25s, transform 0.25s;
+    display: inline-block;
   }
 
   nav a:hover {
     animation: linkHover 0.25s both;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(24px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .reveal {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+
+  .reveal.revealed {
+    opacity: 1;
+    transform: translateY(0);
   }
 </style>
