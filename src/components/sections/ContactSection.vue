@@ -145,7 +145,7 @@
     font-family: 'Inter', sans-serif;
     font-size: 13px;
     font-weight: 500;
-    color: rgba(250, 250, 250, 0.65);
+    color: rgba(240, 235, 227, 0.55);
     letter-spacing: 0.04em;
   }
 
@@ -167,13 +167,13 @@
 
   input::placeholder,
   textarea::placeholder {
-    color: rgba(250, 250, 250, 0.25);
+    color: rgba(240, 235, 227, 0.22);
   }
 
   input:focus,
   textarea:focus {
     border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px rgba(51, 255, 184, 0.15);
+    box-shadow: 0 0 0 3px rgba(201, 135, 58, 0.15);
   }
 
   .submit-btn {
@@ -191,7 +191,7 @@
 
   .submit-btn:hover:not(:disabled) {
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(51, 255, 184, 0.3);
+    box-shadow: 0 6px 20px rgba(201, 135, 58, 0.25);
   }
 
   .submit-btn:disabled {
@@ -217,7 +217,7 @@
 
   .success-msg p {
     font-family: 'Inter', sans-serif;
-    color: rgba(250, 250, 250, 0.65);
+    color: rgba(240, 235, 227, 0.6);
     margin: 0;
   }
 
@@ -240,7 +240,7 @@
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    color: rgba(250, 250, 250, 0.65);
+    color: rgba(240, 235, 227, 0.6);
     text-decoration: none;
     font-family: 'Inter', sans-serif;
     font-size: 15px;

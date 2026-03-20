@@ -5,8 +5,8 @@
         <div class="photo-col reveal">
           <div class="photo-frame">
             <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="avatar-icon">
-              <circle cx="60" cy="45" r="22" stroke="rgba(51,255,184,0.5)" stroke-width="2" fill="rgba(51,255,184,0.08)"/>
-              <path d="M18 105c0-23.196 18.804-42 42-42s42 18.804 42 42" stroke="rgba(51,255,184,0.5)" stroke-width="2" fill="rgba(51,255,184,0.04)"/>
+              <circle cx="60" cy="45" r="22" stroke="rgba(201,135,58,0.45)" stroke-width="2" fill="rgba(201,135,58,0.08)"/>
+              <path d="M18 105c0-23.196 18.804-42 42-42s42 18.804 42 42" stroke="rgba(201,135,58,0.45)" stroke-width="2" fill="rgba(201,135,58,0.05)"/>
             </svg>
           </div>
         </div>
@@ -83,9 +83,9 @@
     width: 260px;
     height: 260px;
     border-radius: 16px;
-    border: 2px solid rgba(51, 255, 184, 0.3);
-    background: rgba(51, 255, 184, 0.05);
-    box-shadow: 0 0 40px rgba(51, 255, 184, 0.1);
+    border: 2px solid rgba(201, 135, 58, 0.25);
+    background: rgba(201, 135, 58, 0.04);
+    box-shadow: 0 0 48px rgba(201, 135, 58, 0.09);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -101,14 +101,14 @@
     font-family: 'Inter', sans-serif;
     font-size: 1rem;
     line-height: 1.75;
-    color: rgba(250, 250, 250, 0.8);
+    color: rgba(240, 235, 227, 0.78);
     margin: 0 0 1rem;
   }
 
   .bio a {
     color: var(--color-primary);
     text-decoration: none;
-    border-bottom: 1px solid rgba(51, 255, 184, 0.3);
+    border-bottom: 1px solid rgba(201, 135, 58, 0.35);
     transition: border-color 0.2s;
   }
 

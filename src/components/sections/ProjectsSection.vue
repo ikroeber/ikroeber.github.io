@@ -120,7 +120,7 @@
 
   .card:hover {
     transform: translateY(-5px);
-    border-color: rgba(51, 255, 184, 0.4);
+    border-color: rgba(201, 135, 58, 0.35);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
   }
 
@@ -147,7 +147,7 @@
     font-family: 'Inter', sans-serif;
     font-size: 14px;
     line-height: 1.65;
-    color: rgba(250, 250, 250, 0.65);
+    color: rgba(240, 235, 227, 0.6);
     margin: 0;
     flex: 1;
   }
@@ -165,7 +165,7 @@
   }
 
   .icon-link {
-    color: rgba(250, 250, 250, 0.45);
+    color: rgba(240, 235, 227, 0.38);
     transition: color 0.2s;
     display: flex;
     align-items: center;

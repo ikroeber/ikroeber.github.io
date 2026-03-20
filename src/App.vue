@@ -25,12 +25,13 @@
 
 <style>
   :root {
-    --color-bg: #0e2a47;
-    --color-primary: #33ffb8;
-    --color-warning: #ffc08c;
-    --color-text: #fafafa;
-    --color-glass: rgba(255, 255, 255, 0.04);
-    --color-glass-border: rgba(255, 255, 255, 0.08);
+    --color-bg: #0A0A0B;
+    --color-primary: #C9873A;
+    --color-warning: #9E7B6B;
+    --color-text: #F0EBE3;
+    --color-text-muted: #7A7068;
+    --color-glass: rgba(240, 235, 227, 0.03);
+    --color-glass-border: rgba(240, 235, 227, 0.07);
     --section-padding: clamp(64px, 10vw, 120px) clamp(16px, 6vw, 80px);
     --header-height: 5em;
   }
@@ -42,9 +43,9 @@
 
   body {
     background-color: var(--color-bg);
-    background-image: url('./assets/background.svg');
-    background-size: cover;
-    background-attachment: fixed;
+    background-image:
+      radial-gradient(ellipse 90% 55% at 50% -5%, rgba(201, 135, 58, 0.07) 0%, transparent 70%),
+      radial-gradient(ellipse 55% 45% at 85% 92%, rgba(201, 135, 58, 0.04) 0%, transparent 60%);
     min-height: 100%;
     width: 100%;
   }
@@ -69,7 +70,7 @@
 
   @keyframes linkHover {
     0% {
-      color: var(--color-warning);
+      color: rgba(240, 235, 227, 0.5);
       transform: translateY(0)
     }
 
@@ -80,7 +81,7 @@
   }
 
   nav a {
-    color: var(--color-warning);
+    color: rgba(240, 235, 227, 0.5);
     text-decoration: none;
     position: relative;
     transition: color 0.25s, transform 0.25s;

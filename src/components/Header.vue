@@ -90,16 +90,16 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    background: rgba(14, 42, 71, 0.6);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    background: rgba(10, 10, 11, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(240, 235, 227, 0.05);
     transition: background 0.3s, border-color 0.3s;
   }
 
   header.scrolled {
-    background: rgba(14, 42, 71, 0.92);
-    border-bottom-color: rgba(255, 255, 255, 0.08);
+    background: rgba(10, 10, 11, 0.96);
+    border-bottom-color: rgba(240, 235, 227, 0.09);
   }
 
   .logo {
@@ -153,7 +153,7 @@
     font-size: 12px;
     font-weight: 600;
     letter-spacing: 0.06em;
-    color: rgba(250, 250, 250, 0.4);
+    color: rgba(240, 235, 227, 0.35);
     padding: 0.2em 0.3em;
     transition: color 0.2s;
   }
@@ -164,7 +164,7 @@
   }
 
   .lang-sep {
-    color: rgba(250, 250, 250, 0.2);
+    color: rgba(240, 235, 227, 0.18);
     font-size: 11px;
     user-select: none;
   }
@@ -206,7 +206,7 @@
     top: var(--header-height);
     left: 0;
     right: 0;
-    background: rgba(14, 42, 71, 0.97);
+    background: rgba(10, 10, 11, 0.98);
     backdrop-filter: blur(14px);
     -webkit-backdrop-filter: blur(14px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);

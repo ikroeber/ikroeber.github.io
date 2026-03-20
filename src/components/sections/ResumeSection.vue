@@ -100,7 +100,7 @@
     background: var(--color-primary);
     color: var(--color-bg);
     transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(51, 255, 184, 0.25);
+    box-shadow: 0 6px 20px rgba(201, 135, 58, 0.2);
     animation: none;
   }
 
@@ -116,7 +116,7 @@
   }
 
   .timeline {
-    border-left: 2px solid rgba(51, 255, 184, 0.25);
+    border-left: 2px solid rgba(201, 135, 58, 0.2);
     padding-left: 1.75rem;
     display: flex;
     flex-direction: column;
@@ -135,7 +135,7 @@
     height: 12px;
     border-radius: 50%;
     background: var(--color-primary);
-    box-shadow: 0 0 8px rgba(51, 255, 184, 0.5);
+    box-shadow: 0 0 8px rgba(201, 135, 58, 0.45);
   }
 
   .timeline-date {
@@ -164,7 +164,7 @@
     font-family: 'Inter', sans-serif;
     font-size: 14px;
     line-height: 1.65;
-    color: rgba(250, 250, 250, 0.6);
+    color: rgba(240, 235, 227, 0.58);
     margin: 0.5rem 0 0;
   }
 </style>

@@ -152,7 +152,7 @@
 
   .cta-btn:hover {
     transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(51, 255, 184, 0.3);
+    box-shadow: 0 8px 28px rgba(201, 135, 58, 0.3);
     animation: none;
     color: var(--color-bg);
   }
@@ -160,7 +160,7 @@
   .scroll-hint {
     position: absolute;
     bottom: 2rem;
-    color: rgba(250, 250, 250, 0.3);
+    color: rgba(240, 235, 227, 0.25);
     animation: fadeUp 0.6s ease both, bounce 2s ease-in-out 1s infinite;
     transition: color 0.2s;
   }

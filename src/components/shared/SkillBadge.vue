@@ -22,8 +22,8 @@
 <style scoped>
   .skill-badge {
     display: inline-block;
-    background: rgba(51, 255, 184, 0.1);
-    border: 1px solid rgba(51, 255, 184, 0.25);
+    background: rgba(201, 135, 58, 0.1);
+    border: 1px solid rgba(201, 135, 58, 0.28);
     border-radius: 20px;
     padding: 4px 12px;
     font-family: 'Inter', sans-serif;
