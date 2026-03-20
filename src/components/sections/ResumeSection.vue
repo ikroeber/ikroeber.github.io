@@ -1,7 +1,7 @@
 <template>
   <section id="curriculo" ref="sectionRef">
     <div class="container">
-      <SectionTitle title="Currículo" class="reveal" />
+      <SectionTitle :title="t('resume.title')" class="reveal" />
 
       <div class="cv-btn-wrap reveal">
         <a href="#" class="cv-btn">
@@ -10,14 +10,14 @@
             <polyline points="7 10 12 15 17 10"/>
             <line x1="12" y1="15" x2="12" y2="3"/>
           </svg>
-          Baixar Currículo (PDF)
+          {{ t('resume.download') }}
         </a>
       </div>
 
       <div class="timeline-block reveal">
-        <h3 class="timeline-heading">Experiência</h3>
+        <h3 class="timeline-heading">{{ t('resume.experienceHeading') }}</h3>
         <div class="timeline">
-          <div v-for="exp in experience" :key="exp.title" class="timeline-item">
+          <div v-for="exp in t('resume.experience')" :key="exp.title" class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
               <span class="timeline-date">{{ exp.period }}</span>
@@ -30,9 +30,9 @@
       </div>
 
       <div class="timeline-block reveal">
-        <h3 class="timeline-heading">Educação</h3>
+        <h3 class="timeline-heading">{{ t('resume.educationHeading') }}</h3>
         <div class="timeline">
-          <div v-for="edu in education" :key="edu.title" class="timeline-item">
+          <div v-for="edu in t('resume.education')" :key="edu.title" class="timeline-item">
             <div class="timeline-dot"></div>
             <div class="timeline-content">
               <span class="timeline-date">{{ edu.period }}</span>
@@ -50,6 +50,7 @@
 <script>
   import { ref } from 'vue'
   import { useReveal } from '../../composables/useReveal'
+  import { useI18n } from '../../i18n/index'
   import SectionTitle from '../shared/SectionTitle.vue'
 
   export default {
@@ -58,43 +59,8 @@
     setup() {
       const sectionRef = ref(null)
       useReveal(sectionRef)
-      return { sectionRef }
-    },
-    data() {
-      return {
-        experience: [
-          {
-            period: '2022 — Presente',
-            title: 'Software Engineer',
-            company: 'Empresa Atual',
-            description:
-              'Desenvolvimento de aplicações web full-stack, arquitetura de microsserviços e liderança técnica de squad. Tecnologias: Vue.js, Node.js, AWS.'
-          },
-          {
-            period: '2020 — 2022',
-            title: 'Frontend Developer',
-            company: 'Empresa Anterior',
-            description:
-              'Criação de interfaces responsivas com React e Vue.js, integração com APIs REST e otimização de performance.'
-          },
-          {
-            period: '2019 — 2020',
-            title: 'Junior Developer',
-            company: 'Primeira Empresa',
-            description:
-              'Início de carreira focado em desenvolvimento web com HTML, CSS, JavaScript e PHP.'
-          }
-        ],
-        education: [
-          {
-            period: '2016 — 2020',
-            title: 'Bacharelado em Ciência da Computação',
-            institution: 'Universidade Federal',
-            description:
-              'Formação sólida em fundamentos de computação, algoritmos, estrutura de dados e engenharia de software.'
-          }
-        ]
-      }
+      const { t } = useI18n()
+      return { sectionRef, t }
     }
   }
 </script>

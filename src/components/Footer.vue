@@ -1,20 +1,23 @@
 <template>
   <footer>
     <nav>
-      <a v-for="link in links" :key="link.name" :href="link.url">
-        {{ link.name }}
+      <a v-for="link in links" :key="link.key" :href="link.url">
+        {{ t(link.key) }}
       </a>
     </nav>
-    <p class="copy">
-      Copyright &copy; Igor Kroeber 2025. Todos os direitos reservados.
-    </p>
+    <p class="copy">{{ t('footer.copyright') }}</p>
   </footer>
 </template>
 
 <script>
   import { pages } from '../constants/pages'
+  import { useI18n } from '../i18n/index'
 
   export default {
+    setup() {
+      const { t } = useI18n()
+      return { t }
+    },
     data() {
       return {
         links: pages

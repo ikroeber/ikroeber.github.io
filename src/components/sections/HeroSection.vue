@@ -2,17 +2,17 @@
   <section class="hero">
     <div class="hero-decor" aria-hidden="true">IK</div>
     <div class="hero-content">
-      <p class="eyebrow">Olá, eu sou</p>
+      <p class="eyebrow">{{ t('hero.eyebrow') }}</p>
       <h1>Igor Kroeber</h1>
       <div class="subtitle-wrapper">
         <Transition name="fade-title" mode="out-in">
           <h2 :key="currentSubtitle" class="subtitle">{{ currentSubtitle }}</h2>
         </Transition>
       </div>
-      <p class="tagline">Construindo soluções elegantes para problemas complexos.</p>
-      <a href="#sobre-mim" class="cta-btn">Ver meu trabalho</a>
+      <p class="tagline">{{ t('hero.tagline') }}</p>
+      <a href="#sobre-mim" class="cta-btn">{{ t('hero.cta') }}</a>
     </div>
-    <a href="#sobre-mim" class="scroll-hint" aria-label="Rolar para baixo">
+    <a href="#sobre-mim" class="scroll-hint" :aria-label="locale === 'pt' ? 'Rolar para baixo' : 'Scroll down'">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
         <path d="M12 5v14M5 12l7 7 7-7"/>
       </svg>
@@ -21,23 +21,30 @@
 </template>
 
 <script>
+  import { useI18n } from '../../i18n/index'
+
   export default {
     name: 'HeroSection',
+    setup() {
+      const { t, locale } = useI18n()
+      return { t, locale }
+    },
     data() {
       return {
-        subtitles: ['Software Engineer', 'Problem Solver', 'Full-Stack Developer'],
         subtitleIndex: 0,
         intervalId: null
       }
     },
     computed: {
       currentSubtitle() {
-        return this.subtitles[this.subtitleIndex]
+        const subtitles = this.t('hero.subtitles')
+        return subtitles[this.subtitleIndex % subtitles.length]
       }
     },
     mounted() {
       this.intervalId = setInterval(() => {
-        this.subtitleIndex = (this.subtitleIndex + 1) % this.subtitles.length
+        const len = this.t('hero.subtitles').length
+        this.subtitleIndex = (this.subtitleIndex + 1) % len
       }, 3000)
     },
     unmounted() {

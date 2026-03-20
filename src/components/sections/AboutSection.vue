@@ -12,17 +12,14 @@
         </div>
 
         <div class="text-col">
-          <SectionTitle title="Sobre Mim" class="reveal" />
+          <SectionTitle :title="t('about.title')" class="reveal" />
+          <p class="bio reveal">{{ t('about.bio1') }}</p>
           <p class="bio reveal">
-            Sou um Engenheiro de Software apaixonado por criar experiências digitais que fazem a diferença.
-            Tenho facilidade em aprender novas tecnologias e me adaptar ao ritmo do mercado.
-          </p>
-          <p class="bio reveal">
-            Ofereço soluções bem projetadas, mantendo os projetos dentro do prazo e com alto padrão de qualidade.
-            Quer conversar sobre um projeto? <a href="#contato">Entre em contato!</a>
+            {{ t('about.bio2') }}
+            <a href="#contato">{{ t('about.bio2Link') }}</a>
           </p>
 
-          <h3 class="skills-heading reveal">Tecnologias</h3>
+          <h3 class="skills-heading reveal">{{ t('about.techHeading') }}</h3>
           <div class="skills-grid reveal">
             <SkillBadge v-for="skill in skills" :key="skill" :label="skill" />
           </div>
@@ -35,6 +32,7 @@
 <script>
   import { ref } from 'vue'
   import { useReveal } from '../../composables/useReveal'
+  import { useI18n } from '../../i18n/index'
   import SectionTitle from '../shared/SectionTitle.vue'
   import SkillBadge from '../shared/SkillBadge.vue'
 
@@ -44,7 +42,8 @@
     setup() {
       const sectionRef = ref(null)
       useReveal(sectionRef)
-      return { sectionRef }
+      const { t } = useI18n()
+      return { sectionRef, t }
     },
     data() {
       return {

@@ -2,29 +2,42 @@
   <header :class="{ scrolled }">
     <a href="#" class="logo" @click.prevent="scrollToTop">IK</a>
     <nav class="desktop-nav">
-      <a v-for="link in links" :key="link.name" :href="link.url">
-        {{ link.name }}
+      <a v-for="link in links" :key="link.key" :href="link.url">
+        {{ t(link.key) }}
       </a>
     </nav>
-    <button
-      class="hamburger"
-      :class="{ open: menuOpen }"
-      @click="menuOpen = !menuOpen"
-      aria-label="Abrir menu"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
+    <div class="header-right">
+      <div class="lang-toggle" role="group" :aria-label="locale === 'pt' ? 'Idioma' : 'Language'">
+        <button
+          :class="{ active: locale === 'pt' }"
+          @click="setLocale('pt')"
+        >PT</button>
+        <span class="lang-sep">|</span>
+        <button
+          :class="{ active: locale === 'en' }"
+          @click="setLocale('en')"
+        >EN</button>
+      </div>
+      <button
+        class="hamburger"
+        :class="{ open: menuOpen }"
+        @click="menuOpen = !menuOpen"
+        :aria-label="locale === 'pt' ? 'Abrir menu' : 'Open menu'"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
     <Transition name="slide-down">
       <nav v-show="menuOpen" class="mobile-nav">
         <a
           v-for="link in links"
-          :key="link.name"
+          :key="link.key"
           :href="link.url"
           @click="menuOpen = false"
         >
-          {{ link.name }}
+          {{ t(link.key) }}
         </a>
       </nav>
     </Transition>
@@ -33,8 +46,13 @@
 
 <script>
   import { pages } from '../constants/pages'
+  import { useI18n } from '../i18n/index'
 
   export default {
+    setup() {
+      const { t, locale, setLocale } = useI18n()
+      return { t, locale, setLocale }
+    },
     data() {
       return {
         links: pages,
@@ -113,6 +131,42 @@
     font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.04em;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .lang-toggle button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    color: rgba(250, 250, 250, 0.4);
+    padding: 0.2em 0.3em;
+    transition: color 0.2s;
+  }
+
+  .lang-toggle button:hover,
+  .lang-toggle button.active {
+    color: var(--color-primary);
+  }
+
+  .lang-sep {
+    color: rgba(250, 250, 250, 0.2);
+    font-size: 11px;
+    user-select: none;
   }
 
   .hamburger {

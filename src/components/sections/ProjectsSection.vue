@@ -2,14 +2,14 @@
   <section id="projetos" ref="sectionRef">
     <div class="container">
       <SectionTitle
-        title="Projetos"
-        subtitle="Alguns projetos que desenvolvi recentemente."
+        :title="t('projects.title')"
+        :subtitle="t('projects.subtitle')"
         class="reveal"
       />
       <div class="grid">
         <article
           v-for="(project, index) in projects"
-          :key="project.title"
+          :key="index"
           class="card reveal"
           :style="{ transitionDelay: index * 100 + 'ms' }"
         >
@@ -18,7 +18,7 @@
           <p class="card-desc">{{ project.description }}</p>
           <div class="card-tags">
             <SkillBadge
-              v-for="tag in project.tags"
+              v-for="tag in projectMeta[index].tags"
               :key="tag"
               :label="tag"
               variant="small"
@@ -26,11 +26,11 @@
           </div>
           <div class="card-links">
             <a
-              v-if="project.github"
-              :href="project.github"
+              v-if="projectMeta[index].github"
+              :href="projectMeta[index].github"
               target="_blank"
               rel="noopener"
-              aria-label="Ver no GitHub"
+              aria-label="GitHub"
               class="icon-link"
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
@@ -38,11 +38,11 @@
               </svg>
             </a>
             <a
-              v-if="project.demo"
-              :href="project.demo"
+              v-if="projectMeta[index].demo"
+              :href="projectMeta[index].demo"
               target="_blank"
               rel="noopener"
-              aria-label="Ver demo"
+              aria-label="Demo"
               class="icon-link"
             >
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -59,8 +59,9 @@
 </template>
 
 <script>
-  import { ref } from 'vue'
+  import { ref, computed } from 'vue'
   import { useReveal } from '../../composables/useReveal'
+  import { useI18n } from '../../i18n/index'
   import SectionTitle from '../shared/SectionTitle.vue'
   import SkillBadge from '../shared/SkillBadge.vue'
 
@@ -70,43 +71,17 @@
     setup() {
       const sectionRef = ref(null)
       useReveal(sectionRef)
-      return { sectionRef }
+      const { t } = useI18n()
+      const projects = computed(() => t('projects.items'))
+      return { sectionRef, t, projects }
     },
     data() {
       return {
-        projects: [
-          {
-            title: 'Portfolio Pessoal',
-            description:
-              'Este mesmo site! Construído com Vue 3, design moderno com glassmorphism, animações CSS e totalmente responsivo.',
-            tags: ['Vue 3', 'CSS3', 'GitHub Pages'],
-            github: 'https://github.com/ikroeber/ikroeber.github.io',
-            demo: 'https://ikroeber.github.io'
-          },
-          {
-            title: 'API REST Node.js',
-            description:
-              'API completa com autenticação JWT, CRUD de usuários e integração com banco de dados PostgreSQL.',
-            tags: ['Node.js', 'Express', 'PostgreSQL', 'JWT'],
-            github: 'https://github.com/ikroeber',
-            demo: null
-          },
-          {
-            title: 'Dashboard React',
-            description:
-              'Dashboard administrativo com visualização de dados em tempo real e sistema de permissões por perfil de usuário.',
-            tags: ['React', 'TypeScript', 'Chart.js'],
-            github: 'https://github.com/ikroeber',
-            demo: null
-          },
-          {
-            title: 'CLI Tool Python',
-            description:
-              'Ferramenta de linha de comando para automação de tarefas repetitivas de desenvolvimento e deploy.',
-            tags: ['Python', 'Click', 'Docker'],
-            github: 'https://github.com/ikroeber',
-            demo: null
-          }
+        projectMeta: [
+          { tags: ['Vue 3', 'CSS3', 'GitHub Pages'], github: 'https://github.com/ikroeber/ikroeber.github.io', demo: 'https://ikroeber.github.io' },
+          { tags: ['Node.js', 'Express', 'PostgreSQL', 'JWT'], github: 'https://github.com/ikroeber', demo: null },
+          { tags: ['React', 'TypeScript', 'Chart.js'], github: 'https://github.com/ikroeber', demo: null },
+          { tags: ['Python', 'Click', 'Docker'], github: 'https://github.com/ikroeber', demo: null }
         ]
       }
     }
